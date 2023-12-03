@@ -19,4 +19,7 @@ ls
 mkdir NewDirectory
 
 mv HumanFriends.txt NewDirectory/
+cd NewDirectory/
+ls
+cd ..
 
