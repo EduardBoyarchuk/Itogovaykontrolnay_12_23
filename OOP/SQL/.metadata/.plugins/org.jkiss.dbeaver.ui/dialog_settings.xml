@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="DBeaver.DriverTabbedViewer">
+	</section>
+	<section name="DBeaver.ActiveWizardDialog.NewConnectionWizard">
+		<item key="DIALOG_X_ORIGIN" value="367"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
+		<item key="DIALOG_WIDTH" value="822"/>
+		<item key="DIALOG_HEIGHT" value="938"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="DBeaver.ShowTipOfTheDayDialog">
+		<item key="DIALOG_X_ORIGIN" value="509"/>
+		<item key="DIALOG_Y_ORIGIN" value="234"/>
+		<item key="DIALOG_WIDTH" value="422"/>
+		<item key="DIALOG_HEIGHT" value="257"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="DBeaver.QM.LogViewer">
+	</section>
+	<section name="ResultSetViewer">
+		<section name="presentations">
+		</section>
+	</section>
+	<section name="DBeaver.SelectDataSourceDialog">
+		<item key="showConnected" value="false"/>
+		<item key="showAllProjects" value="true"/>
+		<item key="DIALOG_X_ORIGIN" value="738"/>
+		<item key="DIALOG_Y_ORIGIN" value="52"/>
+		<item key="DIALOG_WIDTH" value="380"/>
+		<item key="DIALOG_HEIGHT" value="705"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="DriverDownload">
+	</section>
+	<section name="DBeaver.DriverDownloadDialog">
+		<item key="DIALOG_X_ORIGIN" value="578"/>
+		<item key="DIALOG_Y_ORIGIN" value="191"/>
+		<item key="DIALOG_WIDTH" value="700"/>
+		<item key="DIALOG_HEIGHT" value="543"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="DBeaver.StandardErrorDialog">
+		<item key="showDetails" value="false"/>
+		<item key="DIALOG_X_ORIGIN" value="667"/>
+		<item key="DIALOG_Y_ORIGIN" value="380"/>
+		<item key="DIALOG_WIDTH" value="523"/>
+		<item key="DIALOG_HEIGHT" value="214"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="DBeaver.EditConnectionDialog">
+		<item key="DIALOG_X_ORIGIN" value="578"/>
+		<item key="DIALOG_Y_ORIGIN" value="45"/>
+		<item key="DIALOG_WIDTH" value="700"/>
+		<item key="DIALOG_HEIGHT" value="716"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+</section>

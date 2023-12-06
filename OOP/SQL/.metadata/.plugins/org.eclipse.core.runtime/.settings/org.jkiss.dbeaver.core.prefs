@@ -1,0 +1,16 @@
+dialog.default.folder=/home/adminas
+driver.selector.orderBy=score
+eclipse.preferences.version=1
+org.jkiss.dbeaver.core.confirm.exit=always
+sample.database.canceled=true
+search.data.fast-search=true
+search.data.object-source=database\://mysql8-18c40b4c87e-5282d7caf5cd183b/org.jkiss.dbeaver.ext.mysql.model.MySQLCatalog/Human_friends
+search.data.sample-rows=10
+search.metadata.case-sensitive=true
+search.metadata.mask=Human_friends
+search.metadata.max-results=100
+search.metadata.object-source=database\://mysql8-18c40b4c87e-5282d7caf5cd183b/org.jkiss.dbeaver.ext.mysql.model.MySQLCatalog/Human_friends
+search.metadata.object-type=Table column|Table|Procedure
+tipOfTheDayInitializer.notFirstRun=true
+ui.auto.update.check.time=1701884015492
+ui.show.tip.of.the.day.on.startup=false
