@@ -1,0 +1,83 @@
+2023-12-06 23:10:43.803 - DBeaver 23.2.3.202310221533 is starting
+2023-12-06 23:10:43.804 - OS: Linux 6.2.0-37-generic (amd64)
+2023-12-06 23:10:43.804 - Java version: 17.0.6 by Eclipse Adoptium (64bit)
+2023-12-06 23:10:43.805 - Install path: '/usr/share/dbeaver-ce'
+2023-12-06 23:10:43.805 - Instance path: 'file:/home/adminas/ItogovoyaKonrolnay/OOP/SQL/'
+2023-12-06 23:10:43.806 - Memory available 64Mb/1024Mb
+2023-12-06 23:10:43.833 - Create display
+2023-12-06 23:10:44.015 - Initializing DBeaver 23.2.3
+2023-12-06 23:10:44.016 - Host plugin: org.jkiss.dbeaver.ui.app.standalone 23.2.3.202310221533
+2023-12-06 23:10:44.017 - Initialize desktop platform...
+2023-12-06 23:10:44.346 - BounceCastle bundle found. Use JCE provider BC
+> Start Core File Systems [org.eclipse.core.filesystem 1.10.100.v20230717-1727]
+> Start Core Resource Management [org.eclipse.core.resources 3.19.100.v20230814-1312]
+> Start Ядро поддержки совместной работы [org.eclipse.team.core 3.10.100.v20230726-0617]
+> Start DBeaver UI Navigator [org.jkiss.dbeaver.ui.navigator 1.0.117.202310221533]
+2023-12-06 23:10:44.708 - Initialize base platform...
+2023-12-06 23:10:44.750 - Platform initialized (733ms)
+> Start DBeaver UI Editors - Base [org.jkiss.dbeaver.ui.editors.base 1.0.117.202310221533]
+2023-12-06 23:10:44.800 - Starting instance server at http://localhost:45033
+2023-12-06 23:10:44.817 - Run workbench
+> Start DBeaver UI [org.jkiss.dbeaver.ui 5.1.132.202310221533]
+> Start Eclipse e4 SWT рабочая среда [org.eclipse.e4.ui.workbench.swt 0.17.100.v20230727-0604]
+> Start Eclipse Application Services [org.eclipse.e4.core.services 2.4.100.v20230708-0809]
+> Start Eclipse UI Application Services [org.eclipse.e4.ui.services 1.6.100.v20230630-1554]
+> Start Eclipse e4 Progress View [org.eclipse.e4.ui.progress 0.4.100.v20230727-0604]
+> Start Eclipse Bindings Support [org.eclipse.e4.ui.bindings 0.14.100.v20230630-1554]
+> Start Eclipse e4 core commands [org.eclipse.e4.core.commands 1.1.100.v20230630-1554]
+> Start EMF XML/XMI Persistence [org.eclipse.emf.ecore.xmi 2.35.0.v20230801-1141]
+> Start Eclipse CSS SWT Theme Support [org.eclipse.e4.ui.css.swt.theme 0.14.100.v20230727-0604]
+> Start Eclipse e4 дополнения рабочей среды [org.eclipse.e4.ui.workbench.addons.swt 1.5.100.v20230727-0604]
+> Start Eclipse e4 SWT визуализация рабочей среды [org.eclipse.e4.ui.workbench.renderers.swt 0.16.100.v20230801-1255]
+> Start Eclipse Dependency Injection Extensions [org.eclipse.e4.core.di.extensions 0.18.0.v20230429-1914]
+> Start Eclipse CSS SWT Support [org.eclipse.e4.ui.css.swt 0.15.100.v20230727-0604]
+Warning: NLS unused message: BlockedJobsDialog_UserInterfaceTreeElement in: org.eclipse.ui.internal.progress.messages
+2023-12-06 23:10:47.828 - Configure workbench window
+> Start DBeaver SQL Model [org.jkiss.dbeaver.model.sql 1.0.107.202310221533]
+2023-12-06 23:10:48.083 - Total database drivers: 107 (107)
+> Start Ядро Справочной Системы [org.eclipse.help 3.10.100.v20230726-0617]
+2023-12-06 23:10:48.220 - Create actions
+2023-12-06 23:10:48.230 - Disable Eclipse action set 'org.eclipse.ui.edit.text.actionSet.annotationNavigation'
+2023-12-06 23:10:48.230 - Disable Eclipse action set 'org.eclipse.ui.WorkingSetActionSet'
+2023-12-06 23:10:48.231 - Disable Eclipse action set 'org.eclipse.ui.actionSet.openFiles'
+2023-12-06 23:10:49.043 - Initialize workbench window
+2023-12-06 23:10:49.054 - Finish initialization
+> Start DBeaver UI Editors - SQL [org.jkiss.dbeaver.ui.editors.sql 1.0.117.202310221533]
+> Start GEF Classic Draw2d [org.eclipse.draw2d 3.14.0.202308311129]
+> Start GEF Classic GEF (MVC) [org.eclipse.gef 3.15.0.202308311129]
+> Start DBeaver ERD UI [org.jkiss.dbeaver.erd.ui 3.0.77.202310221533]
+> Start DBeaver ERD Model [org.jkiss.dbeaver.erd.model 1.0.77.202310221533]
+> Start Текстовый редактор по умолчанию [org.eclipse.ui.editors 3.17.0.v20230821-1342]
+> Start Структура Текстового Редактора [org.eclipse.ui.workbench.texteditor 3.17.100.v20230821-0745]
+> Start jna [com.sun.jna 5.13.0.v20230812-1000]
+> Start Internet Connection Management UI [org.eclipse.ui.net 1.5.100.v20230726-0617]
+> Start Internet Connection Management [org.eclipse.core.net 1.5.100.v20230630-1232]
+> Start DBeaver UI Editors - Data [org.jkiss.dbeaver.ui.editors.data 1.0.117.202310221533]
+> Start DBeaver Sample Database [org.jkiss.dbeaver.ext.sample.database 1.0.154.202310221533]
+> Start DBeaver Tip of the day [org.jkiss.dbeaver.ext.ui.tipoftheday 1.0.123.202310221533]
+2023-12-06 23:11:05.311 - Connect with 'localhost' (mysql8-18c40b4c87e-5282d7caf5cd183b)
+> Start DBeaver JDBC Model [org.jkiss.dbeaver.model.jdbc 1.0.10.202310221533]
+> Start DBeaver MySQL Support [org.jkiss.dbeaver.ext.mysql 2.1.202.202310221533]
+2023-12-06 23:11:05.372 - Execution context opened (localhost; Main; 0)
+> Start DBeaver GIS Support [org.jkiss.dbeaver.data.gis 1.0.141.202310221533]
+2023-12-06 23:11:05.671 - Execution context opened (localhost; Metadata; 1)
+2023-12-06 23:11:05.790 - Connected (mysql8-18c40b4c87e-5282d7caf5cd183b, MySQL Connector/J [mysql-connector-java-8.0.29 (Revision: dd61577595edad45c398af508cf91ad26fc4144f)])
+2023-12-06 23:11:11.425 - Can't get column 'password': Column 'password' not found.
+> Start DBeaver MySQL UI Support [org.jkiss.dbeaver.ext.mysql.ui 1.0.109.202310221533]
+> Start DBeaver Tasks View [org.jkiss.dbeaver.tasks.ui.view 1.0.66.202310221533]
+> Start DBeaver Tasks - General UI [org.jkiss.dbeaver.tasks.ui 1.0.95.202310221533]
+> Start DBeaver Search UI [org.jkiss.dbeaver.ui.search 1.0.108.202310221533]
+> Start Поддержка поиска [org.eclipse.search 3.15.200.v20230825-1346]
+Warning: NLS unused message: TextSearchVisitor_progress_updating_job in: org.eclipse.search.internal.ui.SearchMessages
+2023-12-06 23:15:30.538 - Search in 'Human_friends.animal_classes'
+2023-12-06 23:15:30.565 - Search in 'Human_friends.cats'
+2023-12-06 23:15:30.577 - Search in 'Human_friends.pack_animals'
+2023-12-06 23:15:30.589 - Search in 'Human_friends.pets'
+> Start DBeaver UI Editors - Connections [org.jkiss.dbeaver.ui.editors.connection 1.0.108.202310221533]
+> Start Data Transfer UI [org.jkiss.dbeaver.data.transfer.ui 1.0.101.202310221533]
+2023-12-06 23:15:43.670 - Service 'org.jkiss.dbeaver.runtime.ui.UIServiceSecurity' not found
+> Start DBeaver Data Transfer [org.jkiss.dbeaver.data.transfer 2.0.101.202310221533]
+> Start ICU4J Base [com.ibm.icu.base 58.2.0.v20170418-1837]
+2023-12-06 23:19:16.707 - DBeaver is stopping
+2023-12-06 23:19:16.708 - Stop instance server
+2023-12-06 23:19:17.709 - DBeaver shutdown completed

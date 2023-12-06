@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+	<item id="NodeList/DBPNamedObject/SearchDataObject">
+		<column name="Name" visible="true" order="0" width="100"/>
+		<column name="Rows Found (&gt;=)" visible="true" order="1" width="117"/>
+	</item>
+	<item id="NodeList/DataSourceDescriptor">
+		<column name="Название" visible="true" order="0" width="100"/>
+		<column name="Описание" visible="true" order="1" width="100"/>
+		<column name="Origin" visible="true" order="2" width="100"/>
+		<column name="Тип Драйвера" visible="true" order="3" width="1514"/>
+	</item>
+	<item id="NodeList/MySQLTable">
+		<column name="Название" visible="true" order="0" width="112"/>
+		<column name="Движок" visible="true" order="1" width="100"/>
+		<column name="Авто-увеличение" visible="true" order="2" width="129"/>
+		<column name="Размер" visible="true" order="3" width="100"/>
+		<column name="Partitioned" visible="true" order="4" width="100"/>
+		<column name="Описание" visible="true" order="5" width="1125"/>
+	</item>
+	<item id="projectExplorer">
+		<column name="Название" visible="true" order="0" width="225"/>
+		<column name="Источник данных" visible="true" order="1" width="201"/>
+	</item>
+	<item id="taskruns">
+		<column name="Системное Время" visible="true" order="0" width="141"/>
+		<column name="Длительность" visible="true" order="1" width="113"/>
+		<column name="Результат" visible="true" order="2" width="100"/>
+	</item>
+	<item id="задачи">
+		<column name="Название" visible="true" order="0" width="100"/>
+		<column name="Последний запуск" visible="true" order="1" width="142"/>
+		<column name="Последний результат(Системное время)" visible="true" order="2" width="309"/>
+		<column name="Тип" visible="true" order="3" width="100"/>
+		<column name="Проект" visible="true" order="4" width="100"/>
+	</item>
+</items>
