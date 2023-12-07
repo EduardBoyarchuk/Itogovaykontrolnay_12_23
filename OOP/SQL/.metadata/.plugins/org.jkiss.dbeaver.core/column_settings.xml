@@ -10,6 +10,32 @@
 		<column name="Origin" visible="true" order="2" width="100"/>
 		<column name="Тип Драйвера" visible="true" order="3" width="1514"/>
 	</item>
+	<item id="NodeList/MySQLCatalog">
+		<column name="Имя схемы" visible="true" order="0" width="115"/>
+		<column name="Кодировка по умолчанию" visible="true" order="1" width="191"/>
+		<column name="Представление по умолчанию" visible="true" order="2" width="222"/>
+		<column name="SQL путь" visible="true" order="3" width="100"/>
+		<column name="Размер" visible="true" order="4" width="457"/>
+	</item>
+	<item id="NodeList/MySQLPartition">
+		<column name="Имя раздела" visible="true" order="0" width="100"/>
+		<column name="Позиция" visible="true" order="1" width="100"/>
+		<column name="Метод" visible="true" order="2" width="100"/>
+		<column name="Движок" visible="true" order="3" width="100"/>
+		<column name="Выражение" visible="true" order="4" width="100"/>
+		<column name="Авто-увеличение" visible="true" order="5" width="129"/>
+		<column name="Описание" visible="true" order="6" width="100"/>
+		<column name="Записи таблицы" visible="true" order="7" width="122"/>
+		<column name="Средняя длина записи" visible="true" order="8" width="166"/>
+		<column name="Длина данных" visible="true" order="9" width="110"/>
+		<column name="Наиб.длина данных" visible="true" order="10" width="147"/>
+		<column name="Длина индекса" visible="true" order="11" width="114"/>
+		<column name="Свободно" visible="true" order="12" width="100"/>
+		<column name="Контр.сумма" visible="true" order="13" width="100"/>
+		<column name="Комментарий" visible="true" order="14" width="107"/>
+		<column name="Узловая группа" visible="true" order="15" width="114"/>
+		<column name="Partitioned" visible="true" order="16" width="100"/>
+	</item>
 	<item id="NodeList/MySQLTable">
 		<column name="Название" visible="true" order="0" width="112"/>
 		<column name="Движок" visible="true" order="1" width="100"/>
@@ -17,6 +43,53 @@
 		<column name="Размер" visible="true" order="3" width="100"/>
 		<column name="Partitioned" visible="true" order="4" width="100"/>
 		<column name="Описание" visible="true" order="5" width="1125"/>
+	</item>
+	<item id="NodeList/MySQLTableColumn">
+		<column name="Название" visible="true" order="0" width="102"/>
+		<column name="#" visible="true" order="1" width="100"/>
+		<column name="Тип данных" visible="true" order="2" width="100"/>
+		<column name="Not NULL" visible="true" order="3" width="100"/>
+		<column name="Авто-увеличение" visible="true" order="4" width="129"/>
+		<column name="Ключ" visible="true" order="5" width="100"/>
+		<column name="По умолчанию" visible="true" order="6" width="112"/>
+		<column name="Дополнительно" visible="true" order="7" width="122"/>
+		<column name="Выражение" visible="true" order="8" width="100"/>
+		<column name="Комментарий" visible="true" order="9" width="371"/>
+	</item>
+	<item id="NodeList/MySQLTableConstraint/MySQLTableConstraintColumn">
+		<column name="Название" visible="true" order="0" width="100"/>
+		<column name="Колонка" visible="true" order="1" width="100"/>
+		<column name="Владелец" visible="true" order="2" width="100"/>
+		<column name="Тип" visible="true" order="3" width="100"/>
+		<column name="Условие ограничения" visible="true" order="4" width="161"/>
+	</item>
+	<item id="NodeList/MySQLTableForeignKey">
+		<column name="Название" visible="true" order="0" width="100"/>
+		<column name="Владелец" visible="true" order="1" width="100"/>
+		<column name="Ссыл.таблица" visible="true" order="2" width="107"/>
+		<column name="Тип" visible="true" order="3" width="100"/>
+		<column name="Ссыл. объект" visible="true" order="4" width="101"/>
+		<column name="При удалении" visible="true" order="5" width="107"/>
+		<column name="При обновлении" visible="true" order="6" width="127"/>
+	</item>
+	<item id="NodeList/MySQLTableIndex/MySQLTableIndexColumn">
+		<column name="Название" visible="true" order="0" width="100"/>
+		<column name="Column" visible="true" order="1" width="100"/>
+		<column name="Таблица" visible="true" order="2" width="100"/>
+		<column name="Тип Индекса" visible="true" order="3" width="100"/>
+		<column name="По возрастанию" visible="true" order="4" width="122"/>
+		<column name="Возможен NULL" visible="true" order="5" width="119"/>
+		<column name="Уникальный" visible="true" order="6" width="100"/>
+		<column name="Дополнительно" visible="true" order="7" width="122"/>
+		<column name="Мощность" visible="true" order="8" width="100"/>
+		<column name="Комментарий" visible="true" order="9" width="107"/>
+	</item>
+	<item id="NodeList/MySQLTrigger">
+		<column name="Название" visible="true" order="0" width="192"/>
+		<column name="Тайминг" visible="true" order="1" width="100"/>
+		<column name="Тип" visible="true" order="2" width="100"/>
+		<column name="Таблица" visible="true" order="3" width="100"/>
+		<column name="Описание Триггера" visible="true" order="4" width="647"/>
 	</item>
 	<item id="projectExplorer">
 		<column name="Название" visible="true" order="0" width="225"/>

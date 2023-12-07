@@ -21,8 +21,8 @@
 
 * *Объединить содержимое этих двух  файлов в один и просмотреть его содержимое.*
   #### cat Pets.txt PackAnimals.txt > Pets_PackAnimals.txt
-  #### cat [Pets_PackAnimals.txt](/Linux/Pets_PackAnimals.txt)
-*  *Переименовать получившийся файл в "Human Friends".*
+  #### cat Pets_PackAnimals.txt
+  *  *Переименовать получившийся файл в "Human Friends".*
    #### mv  Pets_PackAnimals.txt   HumanFriends.txt
 
 2. *Работа с директориями в Linux.*
@@ -73,15 +73,16 @@
 
 ![UML](/OOP/Animals.png)
 
-7. В подключенном MySQL репозитории создать базу данных “Друзья
-человека”
+ 7.
+ *  *В ранее подключенном MySQL создать базу данных с названием "HumanFriends".*
 ```sql
 CREATE DATABASE Human_friends;
 ```
 
-8. Создать таблицы с иерархией из диаграммы в БД
+*   *Создать таблицы, соответствующие иерархии из вашей диаграммы классов*
 ```sql
 USE Human_friends;
+DROP TABLE IF EXISTS animal_classes;
 CREATE TABLE animal_classes
 (
 	Id INT AUTO_INCREMENT PRIMARY KEY, 
@@ -92,8 +93,8 @@ INSERT INTO animal_classes (Class_name)
 VALUES ('вьючные'),
 ('домашние');  
 
-
-CREATE TABLE packed_animals
+DROP TABLE IF EXISTS pack_animals;
+CREATE TABLE pack_animals
 (
 	  Id INT AUTO_INCREMENT PRIMARY KEY,
     Genus_name VARCHAR (20),
@@ -101,12 +102,13 @@ CREATE TABLE packed_animals
     FOREIGN KEY (Class_id) REFERENCES animal_classes (Id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-INSERT INTO packed_animals (Genus_name, Class_id)
+INSERT INTO pack_animals (Genus_name, Class_id)
 VALUES ('Лошади', 1),
 ('Ослы', 1),  
 ('Верблюды', 1); 
-    
-CREATE TABLE home_animals
+
+ DROP TABLE IF EXISTS pets;   
+CREATE TABLE pets
 (
 	  Id INT AUTO_INCREMENT PRIMARY KEY,
     Genus_name VARCHAR (20),
@@ -114,11 +116,12 @@ CREATE TABLE home_animals
     FOREIGN KEY (Class_id) REFERENCES animal_classes (Id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-INSERT INTO home_animals (Genus_name, Class_id)
+INSERT INTO pets (Genus_name, Class_id)
 VALUES ('Кошки', 2),
 ('Собаки', 2),  
 ('Хомяки', 2); 
 
+DROP TABLE IF EXISTS cats;
 CREATE TABLE cats 
 (       
     Id INT AUTO_INCREMENT PRIMARY KEY, 
@@ -126,11 +129,10 @@ CREATE TABLE cats
     Birthday DATE,
     Commands VARCHAR(50),
     Genus_id int,
-    Foreign KEY (Genus_id) REFERENCES home_animals (Id) ON DELETE CASCADE ON UPDATE CASCADE
+    Foreign KEY (Genus_id) REFERENCES pets (Id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 ```
-9. Заполнить низкоуровневые таблицы именами(животных), командами
-которые они выполняют и датами рождения
+* *Заполнить таблицы данными о животных, их командах и датами рождения.*
 ```sql
 INSERT INTO cats (Name, Birthday, Commands, Genus_id)
 VALUES ('Пупа', '2011-01-01', 'кс-кс-кс', 1),
@@ -144,7 +146,7 @@ CREATE TABLE dogs
     Birthday DATE,
     Commands VARCHAR(50),
     Genus_id int,
-    Foreign KEY (Genus_id) REFERENCES home_animals (Id) ON DELETE CASCADE ON UPDATE CASCADE
+    Foreign KEY (Genus_id) REFERENCES pets (Id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 INSERT INTO dogs (Name, Birthday, Commands, Genus_id)
 VALUES ('Дик', '2020-01-01', 'ко мне, лежать, лапу, голос', 2),
@@ -159,7 +161,7 @@ CREATE TABLE hamsters
     Birthday DATE,
     Commands VARCHAR(50),
     Genus_id int,
-    Foreign KEY (Genus_id) REFERENCES home_animals (Id) ON DELETE CASCADE ON UPDATE CASCADE
+    Foreign KEY (Genus_id) REFERENCES pets(Id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 INSERT INTO hamsters (Name, Birthday, Commands, Genus_id)
 VALUES ('Малой', '2020-10-12', '', 3),
@@ -174,7 +176,7 @@ CREATE TABLE horses
     Birthday DATE,
     Commands VARCHAR(50),
     Genus_id int,
-    Foreign KEY (Genus_id) REFERENCES packed_animals (Id) ON DELETE CASCADE ON UPDATE CASCADE
+    Foreign KEY (Genus_id) REFERENCES pack_animals (Id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 INSERT INTO horses (Name, Birthday, Commands, Genus_id)
 VALUES ('Гром', '2020-01-12', 'бегом, шагом', 1),
@@ -189,7 +191,7 @@ CREATE TABLE donkeys
     Birthday DATE,
     Commands VARCHAR(50),
     Genus_id int,
-    Foreign KEY (Genus_id) REFERENCES packed_animals (Id) ON DELETE CASCADE ON UPDATE CASCADE
+    Foreign KEY (Genus_id) REFERENCES pack_animals (Id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 INSERT INTO donkeys (Name, Birthday, Commands, Genus_id)
 VALUES ('Первый', '2019-04-10', NULL, 2),
@@ -204,7 +206,7 @@ CREATE TABLE camels
     Birthday DATE,
     Commands VARCHAR(50),
     Genus_id int,
-    Foreign KEY (Genus_id) REFERENCES packed_animals (Id) ON DELETE CASCADE ON UPDATE CASCADE
+    Foreign KEY (Genus_id) REFERENCES pack_animals (Id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 INSERT INTO camels (Name, Birthday, Commands, Genus_id)
 VALUES ('Горбатый', '2022-04-10', 'вернись', 3),
@@ -213,8 +215,7 @@ VALUES ('Горбатый', '2022-04-10', 'вернись', 3),
 ('Борода', '2022-12-10', "улыбнись", 3);
 ```
 
-10. Удалив из таблицы верблюдов, т.к. верблюдов решили перевезти в другой
-питомник на зимовку. Объединить таблицы лошади, и ослы в одну таблицу.
+* *Удалить записи о верблюдах и объединить таблицы лошадей и ослов.*
 ```sql
 SET SQL_SAFE_UPDATES = 0;
 DELETE FROM camels;
@@ -223,9 +224,7 @@ SELECT Name, Birthday, Commands FROM horses
 UNION SELECT  Name, Birthday, Commands FROM donkeys;
 ```
 
-11. Создать новую таблицу “молодые животные” в которую попадут все
-животные старше 1 года, но младше 3 лет и в отдельном столбце с точностью
-до месяца подсчитать возраст животных в новой таблице
+* *Создать новую таблицу для животных в возрасте от 1 до 3 лет и вычислить их возраст с точностью до месяца.*
 ```sql
 CREATE TEMPORARY TABLE animals AS 
 SELECT *, 'Лошади' as genus FROM horses
@@ -240,44 +239,43 @@ FROM animals WHERE Birthday BETWEEN ADDDATE(curdate(), INTERVAL -3 YEAR) AND ADD
  
 SELECT * FROM yang_animal;
 ```
-12. Объединить все таблицы в одну, при этом сохраняя поля, указывающие на
-прошлую принадлежность к старым таблицам.
+* *Объединить все созданные таблицы в одну, сохраняя информацию о принадлежности к исходным таблицам.*
 ```sql
 SELECT h.Name, h.Birthday, h.Commands, pa.Genus_name, ya.Age_in_month 
 FROM horses h
 LEFT JOIN yang_animal ya ON ya.Name = h.Name
-LEFT JOIN packed_animals pa ON pa.Id = h.Genus_id
+LEFT JOIN pack_animals pa ON pa.Id = h.Genus_id
 UNION 
 SELECT d.Name, d.Birthday, d.Commands, pa.Genus_name, ya.Age_in_month 
 FROM donkeys d 
 LEFT JOIN yang_animal ya ON ya.Name = d.Name
-LEFT JOIN packed_animals pa ON pa.Id = d.Genus_id
+LEFT JOIN pack_animals pa ON pa.Id = d.Genus_id
 UNION
 SELECT c.Name, c.Birthday, c.Commands, ha.Genus_name, ya.Age_in_month 
 FROM cats c
 LEFT JOIN yang_animal ya ON ya.Name = c.Name
-LEFT JOIN home_animals ha ON ha.Id = c.Genus_id
+LEFT JOIN pets ha ON ha.Id = c.Genus_id
 UNION
 SELECT d.Name, d.Birthday, d.Commands, ha.Genus_name, ya.Age_in_month 
 FROM dogs d
 LEFT JOIN yang_animal ya ON ya.Name = d.Name
-LEFT JOIN home_animals ha ON ha.Id = d.Genus_id
+LEFT JOIN pets ha ON ha.Id = d.Genus_id
 UNION
 SELECT hm.Name, hm.Birthday, hm.Commands, ha.Genus_name, ya.Age_in_month 
 FROM hamsters hm
 LEFT JOIN yang_animal ya ON ya.Name = hm.Name
-LEFT JOIN home_animals ha ON ha.Id = hm.Genus_id;
+LEFT JOIN pets ha ON ha.Id = hm.Genus_id;
 ```
 
-13. Создать [класс с Инкапсуляцией методов и наследованием по диаграмме](https://github.com/ILYA-NASA/Kennel_account_system/tree/main/System/src/Model).
-14. Написать [программу, имитирующую работу реестра домашних животных](https://github.com/ILYA-NASA/Kennel_account_system/tree/main/System/src).
+1.  Создать [класс с Инкапсуляцией методов и наследованием по диаграмме](https://github.com/ILYA-NASA/Kennel_account_system/tree/main/System/src/Model).
+2.  Написать [программу, имитирующую работу реестра домашних животных](https://github.com/ILYA-NASA/Kennel_account_system/tree/main/System/src).
 В программе должен быть реализован следующий функционал:    
 	14.1 Завести новое животное    
 	14.2 определять животное в правильный класс    
 	14.3 увидеть список команд, которое выполняет животное    
 	14.4 обучить животное новым командам    
 	14.5 Реализовать навигацию по меню    
-15. Создайте [класс Счетчик](https://github.com/ILYA-NASA/Kennel_account_system/blob/main/System/src/Controller/Counter.java), у которого есть метод add(), увеличивающий̆
+1.  Создайте [класс Счетчик](https://github.com/ILYA-NASA/Kennel_account_system/blob/main/System/src/Controller/Counter.java), у которого есть метод add(), увеличивающий̆
 значение внутренней̆ int переменной̆ на 1 при нажатии “Завести новое
 животное” Сделайте так, чтобы с объектом такого типа можно было работать в
 блоке try-with-resources. Нужно бросить исключение, если работа с объектом
