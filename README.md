@@ -267,7 +267,7 @@ LEFT JOIN yang_animal ya ON ya.Name = hm.Name
 LEFT JOIN pets ha ON ha.Id = hm.Genus_id;
 ```
 
-1.  Создать [класс с Инкапсуляцией методов и наследованием по диаграмме](https://github.com/ILYA-NASA/Kennel_account_system/tree/main/System/src/Model).
+8. *Создать [ иерархию классов в Java, который будет повторять диаграмму классов созданную в задаче 6(Диаграмма классов) .](/OOP_JAVA/).*
 2.  Написать [программу, имитирующую работу реестра домашних животных](https://github.com/ILYA-NASA/Kennel_account_system/tree/main/System/src).
 В программе должен быть реализован следующий функционал:    
 	14.1 Завести новое животное    
