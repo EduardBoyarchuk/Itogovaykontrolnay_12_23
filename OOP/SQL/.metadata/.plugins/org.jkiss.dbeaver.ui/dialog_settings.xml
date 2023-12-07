@@ -17,6 +17,7 @@
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
 	</section>
 	<section name="DBeaver.QM.LogViewer">
+		<item key="column-result" value="120"/>
 	</section>
 	<section name="ResultSetViewer">
 		<section name="presentations">
